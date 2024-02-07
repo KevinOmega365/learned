@@ -1,0 +1,13 @@
+# SQL SERVER T-SQL
+
+## LEN
+
+LEN excludes trailing spaces.
+
+## TRIM
+
+TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )
+
+``` SQL
+SELECT TRIM( '.,! ' FROM '     #     test    .') AS Result;
+```
