@@ -1,0 +1,12 @@
+# JSON query for non-standard keys in SQL server and Newtonsoft Json.NET
+
+If a key contains dots ('.') or reserved character like '@'
+
+## SQL Server
+
+$."@odata.nextLink"
+
+## Newtonsoft Json.NET
+
+$['@odata.nextLink']
+ 
