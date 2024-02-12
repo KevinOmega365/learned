@@ -1,0 +1,27 @@
+# Format Unicorn
+
+``` JavaScript
+String.prototype.formatUnicorn = function() {
+    var e = this.toString();
+    if (!arguments.length)
+        return e;
+    var t = typeof arguments[0]
+        , n = "string" === t || "number" === t ? Array.prototype.slice.call(arguments) : arguments[0];
+    for (var o in n)
+        e = e.replace(new RegExp("\\{" + o + "\\}","gi"), n[o]);
+    return e
+}
+```
+
+``` consle
+> "Hello, {name}, are you feeling {adjective}?".formatUnicorn({name:"Gabriel", adjective: "OK"});
+< 'Hello, Gabriel, are you feeling OK?'
+
+> "Hello, {0}, are you feeling {1}?".formatUnicorn("Bob", "good");
+< 'Hello, Bob, are you feeling good?'
+
+> "Hello, {0}, are you feeling {1}?".formatUnicorn(["Bob", "good"]);
+< 'Hello, Bob, are you feeling good?'
+```
+
+src: [javascript-equivalent-to-printf-string-format](https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/18234317#18234317)
