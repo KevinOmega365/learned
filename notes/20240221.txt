@@ -1,0 +1,5 @@
+# CSS selector for elements without a attribute
+
+``` CSS
+[...temp1.querySelectorAll('th:not([data-hidden])')]
+```
