@@ -1,0 +1,11 @@
+# Query Selector for itemprop
+
+[att=val] -- exact value
+
+and
+
+[att~=val] selector, which matches in both cases: if it’s the only token or if it’s one of multiple tokens
+
+``` JavaScript
+document.querySelectorAll('a[itemprop~="codeRepository"]')
+```
