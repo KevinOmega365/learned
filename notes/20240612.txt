@@ -1,0 +1,9 @@
+# Sort Aggregated Strings SQL SERVER
+
+... within group (order by value) ...
+
+DtsFlagsSorted = '|' + (select string_agg(json_value(value, '$.value'), '|') within group (order by value) from openjson(DTS.otherCompanyDistributions) ) + '|'
+
+Example column value: [{"value":"PFS-R"},{"value":"AKSO-LEI-I"},{"value":"DRW-I"},{"value":"UPP-I"}]
+
+Example output: |AKSO-LEI-I|DRW-I|PFS-R|UPP-I|
