@@ -1,0 +1,5 @@
+# Empty Recycle Bin with PowerShell
+
+``` Terminal
+> Clear-RecycleBin
+```
