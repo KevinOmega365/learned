@@ -1,0 +1,9 @@
+# C# console app template
+
+``` Terminal
+dotnet new console -n JsonPlay
+cd .\JsonPlay\
+dotnet add package Newtonsoft.Json
+```
+
+See <https://aka.ms/new-console-template> for more information
