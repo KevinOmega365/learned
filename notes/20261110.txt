@@ -1,0 +1,5 @@
+# kubectl configmap
+
+kubectl describe -n df-tenant-omega-dev configmap dataflow-connections
+
+kubectl get configmap -n df-tenant-omega-dev
